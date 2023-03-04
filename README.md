@@ -31,7 +31,7 @@ Und wie oben schon erwähnt: Die Sprache hat im Vergleich wenig Elemente. Das ma
 
 ## Resourcen
 
-Dokumentation zu dem Kurs: TODO
+Dokumentation zu dem Kurs:
 
 https://dewetron.github.io/course_developing_in_c/
 
