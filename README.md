@@ -33,6 +33,8 @@ Und wie oben schon erwähnt: Die Sprache hat im Vergleich wenig Elemente. Das ma
 
 Dokumentation zu dem Kurs: TODO
 
+https://dewetron.github.io/course_developing_in_c/
+
 Chatmöglichkeit im DEWETRON Slack: TODO
 
 https://de.wikipedia.org/wiki/C_(Programmiersprache)
