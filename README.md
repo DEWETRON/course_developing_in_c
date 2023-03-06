@@ -1,7 +1,3 @@
-# Developing in C for Newbees
-
-
-
 # Entwicklung in C für Anfänger
 
 Willkommen bei einem kleinen Programmierkurs für Interessierte ohne großem Vorwissen.
@@ -53,5 +49,8 @@ Die Übungen selbst sind Teil des dieses Repositories.
 4. C Datentypen: int, short, long usw.
 5. C Textausgabe: printf 
 5. Aufgabe 2: Ausgabe der verschiedenen Datentypen
+
+
+# Developing in C for Newbees
 
 
