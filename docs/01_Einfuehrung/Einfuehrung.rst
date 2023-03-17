@@ -1,10 +1,98 @@
-Einführung und Begriffe
+Einführung
 =======================
 
-Achtung "Denglish"!
 
-Damit muss man als Programmierer leben können.
+Die Programmiersprache C
+------------------------
 
-TODO
+C ist eine recht kleine Programmierersprache. Das macht sie anpassbar und 
+sehr gut auf großen wie auch kleinen (embedded) System verwendbar.
+
+Erfunden wurde sie im Jahr 1972 von Dennis Ritchie. Sie ist sehr Nahe an der Art
+wie ein Prozessor wirklich funktioniert.
+
+Fast alle Betriebssysteme bzw ihr Kern sind in C Programmiert. Man kennt vielleicht
+Microsoft Windows oder Linux :-).
 
 
+
+
+
+Begriffe und Werkzeuge
+----------------------
+
+Ich sage es kurz: Es gibt deutsche Begriffe für die meisten Werkzeuge. Aber die verwendet keiner!
+Software Entwicklung ist eine der Beschäftigungen die Nebenbei einen sehr soliden technischen
+Wortschatz aufbauen.
+
+
+Source Code
+~~~~~~~~~~~
+Der Text der die Grundlage eines Programmes ist. Source Code ist in einer Programmiersprache geschrieben.
+Hier im algemeinen in C.
+
+
+Compiler
+~~~~~~~~
+Ein Compiler hat die Aufgabe den Source Code eines Programmes für einen Computer zu übersetzen.
+Er wird aus unseren Beispielen eine ausführbare Datei generieren. Entweder ein sogenanntes "Executeable",
+oder ein "Object" File.
+
+
+Preprozessor
+~~~~~~~~~~~~
+Ein Preprozessor sitzt zwischen dem Source Code und dem Compiler. Der filtert im Source Code diverse
+Begriffe ("#include") und ersetzt sie. Bei #include mit dem Inhalt der Datei. Typischerweise eine Header
+Datei.
+
+Preprozessor Statements beginnen immer mit einer Raute.
+
+
+Integrated Development Environment (IDE)
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Wäre zum Beispiel Visual Studio 2022 oder auch Visual Studio Code.
+
+
+Makefile
+~~~~~~~~
+Ein "Rezept" das steuert wie ein Programm übersetzt werden muss.
+
+
+Debugger
+~~~~~~~~
+Ein Debugger erlaubt es Fehler in einem Programm zu finden. Man kann die Asuführung beobachten, den
+Inhalt von Variablen betrachten und Breakpoints setzen.
+
+
+Profiler
+~~~~~~~~
+Ein wichtiges Optimierungstool das zeig wo viel Zeit in einem Programm verbraucht wird. An dieses
+Stellen kann man dann Änderungen durchführen um hoffentlich eine schnelleres Executeable zu erhalten.
+
+
+
+Linker
+~~~~~~
+Notwendiges Tool um aus mehreren Object Files ein Programm zu erhalten. Nötig da größere Programme
+üblicherweise aus mehreren Dateien bestehen.
+
+
+h File (Header)
+~~~~~~~~~~~~~~~
+Header files beeinhalten deklarieren Datentypen und Funktionen. 
+
+
+c File (Source)
+~~~~~~~~~~~~~~~
+Source files fügen definieren die in Header Files erwähnten Funktionen.
+
+
+Executeable
+~~~~~~~~~~~
+Eine ausführbare Datei.
+
+
+Library
+~~~~~~~
+Ein binary das nicht ausführbar ist, aber von anderen Executables verwendet werden kann.
