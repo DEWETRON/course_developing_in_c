@@ -21,8 +21,8 @@ Microsoft Windows oder Linux :-).
 Begriffe und Werkzeuge
 ----------------------
 
-Ich sage es kurz: Es gibt deutsche Begriffe für die meisten Werkzeuge. Aber die verwendet keiner!
-Software Entwicklung ist eine der Beschäftigungen die Nebenbei einen sehr soliden technischen
+Ich sage es kurz: Es gibt deutsche Begriffe für die meisten Werkzeuge. Aber die verwendet keiner.
+Software Entwicklung ist eine der Beschäftigungen die nebenbei einen sehr soliden technischen
 Wortschatz aufbauen.
 
 
