@@ -38,6 +38,10 @@ https://de.wikipedia.org/wiki/C_(Programmiersprache)
 Alternatives Tutorial
 https://www.c-howto.de/tutorial/
 
+Jörg Faschingbauer:
+https://www.faschingbauer.me/trainings/repertoire/c-like/c.html
+
+
 Die Übungen selbst sind Teil des dieses Repositories.
 
 
