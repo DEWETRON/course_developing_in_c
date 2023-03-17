@@ -38,6 +38,7 @@ Ein Compiler hat die Aufgabe den Source Code eines Programmes für einen Compute
 Er wird aus unseren Beispielen eine ausführbare Datei generieren. Entweder ein sogenanntes "Executeable",
 oder ein "Object" File.
 
+Beispiel: gcc, clang
 
 Preprozessor
 ~~~~~~~~~~~~
@@ -46,6 +47,8 @@ Begriffe ("#include") und ersetzt sie. Bei #include mit dem Inhalt der Datei. Ty
 Datei.
 
 Preprozessor Statements beginnen immer mit einer Raute.
+
+Beispiel: cpp
 
 
 Integrated Development Environment (IDE)
@@ -58,11 +61,15 @@ Makefile
 ~~~~~~~~
 Ein "Rezept" das steuert wie ein Programm übersetzt werden muss.
 
+Beispiel: make
+
 
 Debugger
 ~~~~~~~~
 Ein Debugger erlaubt es Fehler in einem Programm zu finden. Man kann die Asuführung beobachten, den
 Inhalt von Variablen betrachten und Breakpoints setzen.
+
+Beispiel: gdb, lldb
 
 
 Profiler
@@ -71,11 +78,12 @@ Ein wichtiges Optimierungstool das zeig wo viel Zeit in einem Programm verbrauch
 Stellen kann man dann Änderungen durchführen um hoffentlich eine schnelleres Executeable zu erhalten.
 
 
-
 Linker
 ~~~~~~
 Notwendiges Tool um aus mehreren Object Files ein Programm zu erhalten. Nötig da größere Programme
 üblicherweise aus mehreren Dateien bestehen.
+
+Beispiel: ld
 
 
 h File (Header)
