@@ -54,7 +54,10 @@ Beispiel: cpp
 Integrated Development Environment (IDE)
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
-Wäre zum Beispiel Visual Studio 2022 oder auch Visual Studio Code.
+Wäre zum Beispiel Visual Studio 2022 oder auch Visual Studio Code. Eine IDE kombiniert
+Editor, Compiler, Linker, Debugger und alles was man noch so brauchen könnte. Der
+Editor unterstützt typischerweise Syntax Highlighting. Das macht Source Code leichter
+bearbeit- und lesbar.
 
 
 Makefile
