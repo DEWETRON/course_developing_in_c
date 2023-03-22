@@ -6,12 +6,12 @@ Die Programmiersprache C
 ------------------------
 
 C ist eine recht kleine Programmierersprache. Das macht sie anpassbar und 
-sehr gut auf großen wie auch kleinen (embedded) System verwendbar.
+sehr gut auf großen wie auch kleinen (embedded) Systemen verwendbar.
 
 Erfunden wurde sie im Jahr 1972 von Dennis Ritchie. Sie ist sehr Nahe an der Art
 wie ein Prozessor wirklich funktioniert.
 
-Fast alle Betriebssysteme bzw ihr Kern sind in C Programmiert. Man kennt vielleicht
+Fast alle Betriebssysteme bzw ihr Kern sind in C programmiert. Man kennt vielleicht
 Microsoft Windows oder Linux :-).
 
 
@@ -107,3 +107,28 @@ Eine ausführbare Datei.
 Library
 ~~~~~~~
 Ein binary das nicht ausführbar ist, aber von anderen Executables verwendet werden kann.
+
+
+
+
+Andere Begriffe
+---------------
+
+
+Spaghetticode
+~~~~~~~~~~~~~
+Typischer Stil der am Anfang einer Programmierkarriere häufig genutzt wird.
+Da man das Gefühl für die Größe von Funktionen noch nicht entwickelt hat, entstehen
+lange wenig zusammenhängende Funktionen die schwer verständlich und wartbar sind.
+Diese Phase geht mit Erfahrung vorbei.
+
+
+Coding Standard
+~~~~~~~~~~~~~~~
+Methode erfahrener Programmierer um Junior und Anfänger zu nerven. Nicht nur das man
+eine neue Programmiersprache und Beispiele meistern soll, verlangen diese auch noch
+einen gewissen Stil, einen Coding Standard, einzuhalten: Funkionen so, Variable auf 
+diese Art, usw... Sprache für Kommentare auf Englisch...
+
+Trotzdem wichtig weil der Source Code auf Dauer für alle besser les- und wartbar ist.
+
