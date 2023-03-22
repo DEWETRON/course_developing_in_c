@@ -14,7 +14,7 @@ Entwicklung in C für Anfänger
    :includehidden:
 
    01_Einfuehrung/Einfuehrung.rst
-   02_Werkzeuge/Werkzeuge.rst
+   02_DasErsteProgramm/DasErsteProgramm.rst
    03_Uebung_HelloWorld/Uebung_HelloWorld.rst
    04_Datentypen/Datentypen.rst
    05_TextAusgabe/TextAusgabe.rst

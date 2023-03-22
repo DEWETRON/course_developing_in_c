@@ -5,7 +5,7 @@ Einführung
 Die Programmiersprache C
 ------------------------
 
-C ist eine recht kleine Programmierersprache. Das macht sie anpassbar und 
+C ist eine recht kleine Programmiersprache. Das macht sie anpassbar und 
 sehr gut auf großen wie auch kleinen (embedded) Systemen verwendbar.
 
 Erfunden wurde sie im Jahr 1972 von Dennis Ritchie. Sie ist sehr Nahe an der Art
