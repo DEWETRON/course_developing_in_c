@@ -118,3 +118,99 @@ machen dann auch Verbesserungsvorschläge.
     gcc -Wall hello_world.c -o hello_world.exe
     ./hello_world 
     Hello World
+
+
+
+String Formattierung und Ausgabe
+--------------------------------
+
+Aufbauend auf dem *Hello World* Beispiel möchte ich im nächsten ein wenig auf die Text Ausgabe und
+String Formattierung eingehen. Im Prinzip möchte ich die Tabelle "Hello World im Speicher" automatisch
+generieren lassen.
+
+Dazu werden wir neue Sprachfeatures kennen lernen:
+
+    * char array als Datentyp
+    * sizeof Operator
+    * **for** Schleife
+    * printf Formatstrings
+    * hexadecimale Zahlendarstellung
+
+
+.. code-block:: C
+    :caption: hello_world.c
+
+    // Zweite Übung "Hello World Zeichentabelle"
+
+    #include <stdio.h>
+
+    int main()
+    {
+        int i;
+        char hw_text[] = "Hello World\n";
+
+        for (i=0; i<sizeof(hw_text); ++i)
+        {
+            printf("%2d  %c  %3d  %02x\n", i, hw_text[i], hw_text[i], hw_text[i]);
+        }
+        
+        return 0;
+    }
+
+Schauen wir uns das zweite Programm etwas genauer an. Als erstes defineren wir eine int Variable i.
+Diese brauchen wir als Laufvariable in der weiter unten genutzten for-Schleife.
+
+Nebeninfo: In C müssen Variablen immer am Anfang eines Scopes definiert sein. Das bedeutet zB am 
+Anfang einer Funktion.
+
+Dannach definieren wir Platz für unseren Textes mit Hilfe eines *char arrays*. Ohne Angabe eine
+Größe innerhalb der eckigen Klammern [], passt sich das Array automatisch dem Text der Zuweisung
+an. Inklusive des abschließenden \0, das mann so leider nicht sieht (implizit).
+
+Nun kommt unsere erste for Schleife. Eine for Schleife hat 3 Argumente:
+
+1. Initialer Wert:  i=0;  i started mit dem Wert 0
+2. Abbruch oder End Bedingung: Wiederhole solange i kleiner dem angegeben Wert ist
+3. Inkrement: ++i ist eine Kurzform der Berechnung i=i+1.
+
+
+Lustig: ++i und i++ machen in diesem Fall das Gleiche haben aber einen subtilen Unterschied:
+Preinkrement vs Postinkrement. Dazu aber später mehr.
+
+Mit *sizeof* lernen wir einen sogenannten Operator kennen. Eine in die Sprache C eingebaute, frei 
+verwendbare Funktion. *sizeof* ermittelt uns den Platzbedarf einer Variable in Bytes. Für unser array
+meldet es 13 Bytes.
+
+Frage: Welchen Wert würde uns sizeof(i) ausgeben?
+
+Unsere Schleife wird nun 13 Mal durchgeführt. Mit i können wir die einzelnen Einträge des arrays 
+direkt ansprechen und ausgeben lassen.
+
+
+Der Aufruf von printf sieht bei diesem Beispiel schon deutlich komplizierter aus. Das erste Argument
+ist der sogenannte "Formatstring".
+
+
+
+Compilieren von Hello World Table
+---------------------------------
+
+.. code-block:: console
+    :caption: hello_world_table.c compilieren und ausführen
+
+    gcc -Wall hello_world_table.c -o hello_world_table.exe
+    ./hello_world_table
+     0  H   72  48
+     1  e  101  65
+     2  l  108  6c
+     3  l  108  6c
+     4  o  111  6f
+     5      32  20
+     6  W   87  57
+     7  o  111  6f
+     8  r  114  72
+     9  l  108  6c
+    10  d  100  64
+    11  
+        10  0a
+    12      0  00
