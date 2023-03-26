@@ -1,0 +1,18 @@
+@charset "UTF-8";
+
+.md-typeset .md-typeset__table{
+    display: block;
+    margin-bottom:.5em;
+    padding:0 .8rem
+}
+
+.longtable tr td:first-child
+{
+    width: auto;
+    white-space: normal;
+}
+
+.longtable tr
+{
+    text-align: left;
+}

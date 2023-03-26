@@ -1,0 +1,661 @@
+
+<!DOCTYPE html>
+
+<html lang="de">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta http-equiv="x-ua-compatible" content="ie=edge">
+  <meta name="lang:clipboard.copy" content="Copy to clipboard">
+  <meta name="lang:clipboard.copied" content="Copied to clipboard">
+  <meta name="lang:search.language" content="en">
+  <meta name="lang:search.pipeline.stopwords" content="True">
+  <meta name="lang:search.pipeline.trimmer" content="True">
+  <meta name="lang:search.result.none" content="No matching documents">
+  <meta name="lang:search.result.one" content="1 matching document">
+  <meta name="lang:search.result.other" content="# matching documents">
+  <meta name="lang:search.tokenizer" content="[\s\-]+">
+
+  
+    <link href="https://fonts.gstatic.com/" rel="preconnect" crossorigin>
+    <link href="https://fonts.googleapis.com/css?family=Roboto+Mono:400,500,700|Roboto:300,400,400i,700&display=fallback" rel="stylesheet">
+
+    <style>
+      body,
+      input {
+        font-family: "Roboto", "Helvetica Neue", Helvetica, Arial, sans-serif
+      }
+
+      code,
+      kbd,
+      pre {
+        font-family: "Roboto Mono", "Courier New", Courier, monospace
+      }
+    </style>
+  
+
+  <link rel="stylesheet" href="../_static/stylesheets/application.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-palette.css"/>
+  <link rel="stylesheet" href="../_static/stylesheets/application-fixes.css"/>
+  
+  <link rel="stylesheet" href="../_static/fonts/material-icons.css"/>
+  
+  <meta name="theme-color" content="#3f51b5">
+  <script src="../_static/javascripts/modernizr.js"></script>
+  
+  
+  
+    <title>Das erste Programm &#8212; Entwicklung in C (0.1) Dokumentation</title>
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/material.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/stylesheets/oxygen_material.css" />
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/sphinx_highlight.js"></script>
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="prev" title="Einführung" href="../01_Einfuehrung/Einfuehrung.html" />
+  
+   
+
+  </head>
+  <body dir=ltr
+        data-md-color-primary=blue data-md-color-accent=light-blue>
+  
+  <svg class="md-svg">
+    <defs data-children-count="0">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" width="416" height="448" viewBox="0 0 416 448" id="__github"><path fill="currentColor" d="M160 304q0 10-3.125 20.5t-10.75 19T128 352t-18.125-8.5-10.75-19T96 304t3.125-20.5 10.75-19T128 256t18.125 8.5 10.75 19T160 304zm160 0q0 10-3.125 20.5t-10.75 19T288 352t-18.125-8.5-10.75-19T256 304t3.125-20.5 10.75-19T288 256t18.125 8.5 10.75 19T320 304zm40 0q0-30-17.25-51T296 232q-10.25 0-48.75 5.25Q229.5 240 208 240t-39.25-2.75Q130.75 232 120 232q-29.5 0-46.75 21T56 304q0 22 8 38.375t20.25 25.75 30.5 15 35 7.375 37.25 1.75h42q20.5 0 37.25-1.75t35-7.375 30.5-15 20.25-25.75T360 304zm56-44q0 51.75-15.25 82.75-9.5 19.25-26.375 33.25t-35.25 21.5-42.5 11.875-42.875 5.5T212 416q-19.5 0-35.5-.75t-36.875-3.125-38.125-7.5-34.25-12.875T37 371.5t-21.5-28.75Q0 312 0 260q0-59.25 34-99-6.75-20.5-6.75-42.5 0-29 12.75-54.5 27 0 47.5 9.875t47.25 30.875Q171.5 96 212 96q37 0 70 8 26.25-20.5 46.75-30.25T376 64q12.75 25.5 12.75 54.5 0 21.75-6.75 42 34 40 34 99.5z"/></svg>
+      
+    </defs>
+  </svg>
+  
+  <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer">
+  <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search">
+  <label class="md-overlay" data-md-component="overlay" for="__drawer"></label>
+  <a href="#02_DasErsteProgramm/DasErsteProgramm" tabindex="1" class="md-skip"> Skip to content </a>
+  <header class="md-header" data-md-component="header">
+  <nav class="md-header-nav md-grid">
+    <div class="md-flex navheader">
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <a href="../index.html" title="Entwicklung in C (0.1) Dokumentation"
+           class="md-header-nav__button md-logo">
+          
+            &nbsp;
+          
+        </a>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--menu md-header-nav__button" for="__drawer"></label>
+      </div>
+      <div class="md-flex__cell md-flex__cell--stretch">
+        <div class="md-flex__ellipsis md-header-nav__title" data-md-component="title">
+          <span class="md-header-nav__topic">Entwicklung in C</span>
+          <span class="md-header-nav__topic"> Das erste Programm </span>
+        </div>
+      </div>
+      <div class="md-flex__cell md-flex__cell--shrink">
+        <label class="md-icon md-icon--search md-header-nav__button" for="__search"></label>
+        
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" action="../search.html" method="get" name="search">
+      <input type="text" class="md-search__input" name="q" placeholder="Search"
+             autocapitalize="off" autocomplete="off" spellcheck="false"
+             data-md-component="query" data-md-state="active">
+      <label class="md-icon md-search__icon" for="__search"></label>
+      <button type="reset" class="md-icon md-search__icon" data-md-component="reset" tabindex="-1">
+        &#xE5CD;
+      </button>
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="result">
+          <div class="md-search-result__meta">
+            Type to start searching
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+      </div>
+      
+      
+  
+  <script src="../_static/javascripts/version_dropdown.js"></script>
+  <script>
+    var json_loc = "../"versions.json"",
+        target_loc = "../../",
+        text = "Versions";
+    $( document ).ready( add_version_dropdown(json_loc, target_loc, text));
+  </script>
+  
+
+    </div>
+  </nav>
+</header>
+
+  
+  <div class="md-container">
+    
+    
+    
+  <nav class="md-tabs" data-md-component="tabs">
+    <div class="md-tabs__inner md-grid">
+      <ul class="md-tabs__list">
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Entwicklung in C (0.1) Dokumentation</a></li>
+      </ul>
+    </div>
+  </nav>
+    <main class="md-main">
+      <div class="md-main__inner md-grid" data-md-component="container">
+        
+          <div class="md-sidebar md-sidebar--primary" data-md-component="navigation">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                <nav class="md-nav md-nav--primary" data-md-level="0">
+  <label class="md-nav__title md-nav__title--site" for="__drawer">
+    <a href="../index.html" title="Entwicklung in C (0.1) Dokumentation" class="md-nav__button md-logo">
+      
+        <img src="../_static/" alt=" logo" width="48" height="48">
+      
+    </a>
+    <a href="../index.html"
+       title="Entwicklung in C (0.1) Dokumentation">Entwicklung in C</a>
+  </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../01_Einfuehrung/Einfuehrung.html" class="md-nav__link">Einführung</a>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Das erste Programm </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Das erste Programm</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#02-dasersteprogramm-dasersteprogramm--page-root" class="md-nav__link">Das erste Programm</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#hello-world-in-c" class="md-nav__link">Hello World in C</a>
+        </li>
+        <li class="md-nav__item"><a href="#compilieren-von-hello-world" class="md-nav__link">Compilieren von Hello World</a>
+        </li>
+        <li class="md-nav__item"><a href="#string-formattierung-und-ausgabe" class="md-nav__link">String Formattierung und Ausgabe</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#hexadezimalformat" class="md-nav__link">Hexadezimalformat?</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#compilieren-von-hello-world-table" class="md-nav__link">Compilieren von Hello World Table</a>
+        </li></ul>
+            </nav>
+        </li>
+  </ul>
+</nav>
+      
+    
+    </li>
+  </ul>
+  
+
+</nav>
+              </div>
+            </div>
+          </div>
+          <div class="md-sidebar md-sidebar--secondary" data-md-component="toc">
+            <div class="md-sidebar__scrollwrap">
+              <div class="md-sidebar__inner">
+                
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#02-dasersteprogramm-dasersteprogramm--page-root" class="md-nav__link">Das erste Programm</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#hello-world-in-c" class="md-nav__link">Hello World in C</a>
+        </li>
+        <li class="md-nav__item"><a href="#compilieren-von-hello-world" class="md-nav__link">Compilieren von Hello World</a>
+        </li>
+        <li class="md-nav__item"><a href="#string-formattierung-und-ausgabe" class="md-nav__link">String Formattierung und Ausgabe</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#hexadezimalformat" class="md-nav__link">Hexadezimalformat?</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#compilieren-von-hello-world-table" class="md-nav__link">Compilieren von Hello World Table</a>
+        </li></ul>
+            </nav>
+        </li>
+  </ul>
+</nav>
+              </div>
+            </div>
+          </div>
+        
+        <div class="md-content">
+          <article class="md-content__inner md-typeset" role="main">
+            
+  <section id="das-erste-programm">
+<h1 id="02-dasersteprogramm-dasersteprogramm--page-root">Das erste Programm<a class="headerlink" href="#02-dasersteprogramm-dasersteprogramm--page-root" title="Permalink to this heading">¶</a></h1>
+<p>Beim Erlernen einer ersten oder neuen Programmiersprache gibt es seit jeher eine kleine Tradition:
+Das erste Programm ist „Hello World!“, ein Programm das bei seiner Ausführung die
+Welt begrüßt.</p>
+<p>Und natürlich machen wir das auch hier und hoffentlich lernen wir auch was dabei!</p>
+<section id="hello-world-in-c">
+<h2 id="hello-world-in-c">Hello World in C<a class="headerlink" href="#hello-world-in-c" title="Permalink to this heading">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id1">
+<div class="code-block-caption"><span class="caption-number">Quellcode 1 </span><span class="caption-text">hello_world.c</span><a class="headerlink" href="#id1" title="Link zu diesem Quellcode">¶</a></div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Erste Übung "Hello World"</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">"Hello World</span><span class="se">\n</span><span class="s">"</span><span class="p">);</span>
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Und was sehen wir hier alles?</p>
+<p>Ein Programm besteht aus Funktionen und Variablen. Oder auch ganz ohne Variablen in unserem einfachen Fall.
+Funktionen bestehen aus „Statements“.  ‚printf‘ im Bespiel ist eine Funktion, und ‚printf(„Hello Worldn“);‘
+ein Aufruf der Funktion printf mit dem Argument „Hello World\n“.</p>
+<p>Auch „int main()“ ist eine Funktion. Genauer gesagt ist es die Definition der Hauptfunktion (== main). Diese
+ist für ein Programm Pflicht und wird beim Start des Programmes von der C Runtime aufgerufen.</p>
+<p><strong>return 0;</strong> ist der Exitcode des Programmes. Der Wert 0 ist bedeutet in diesem Zusammenhang üblerweise ok, das eben
+alles geklappt hat.</p>
+<p>Und was gibt es noch?</p>
+<p><strong>#include&lt;stdio.h&gt;</strong></p>
+<p>ist eine Anweisung für den C Preprozessor. Er sucht diese Datei „stdio.h“, ein Standard-Header, und fügt den Inhalt
+dieses Datei zu unserem Sourcecode hinzu. Erst dadurch bekommen wir die „printf“ Funktion zur Verfügung und können
+diese dann aufrufen.</p>
+<p><strong>int</strong> das ist unser erster Kontakt mit einem Datentypen. int steht für „integer“ und bezeichnet ganzzahlige Datentypen
+im Bereich von 32Bit. In einem int kann man Werte zwischen -2^31 bis 2^31-1 darstellen. Wer das nicht im Kopf ausrechnen kann,
+das sind -2.147.483.648 bis 2.147.483.647. Reicht sicher mal fürs erste.</p>
+<p>Der Text „Hello World\n“ ist ein C ein Character Array auch string genannt.
+Jedes Zeichen dieses strings hat den „“char“ Datentyp. Ein char „Character“ hat 8 Bit, kann also Werte zwischen -128 und 127
+annehmen. Das reicht für die Buschstaben unseres Alphabetes.</p>
+<p>Im Speicher sieht das dann so aus:</p>
+<table id="id2">
+<caption><span class="caption-number">Tab. 1 </span><span class="caption-text">„Hello World“ im Speicher</span><a class="headerlink" href="#id2" title="Link zu dieser Tabelle">¶</a></caption>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Index</strong></p></th>
+<th class="head"><p><strong>Character</strong></p></th>
+<th class="head"><p><strong>Wert</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>H</p></td>
+<td><p>72</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>e</p></td>
+<td><p>101</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>l</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>l</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>o</p></td>
+<td><p>111</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>‚ ‚</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>W</p></td>
+<td><p>87</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>o</p></td>
+<td><p>111</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>r</p></td>
+<td><p>114</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>l</p></td>
+<td><p>108</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>d</p></td>
+<td><p>100</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>n</p></td>
+<td><p>10</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>0</p></td>
+<td><p>0</p></td>
+</tr>
+</tbody>
+</table>
+<p>Das <strong>\n</strong> kommt wirklich noch aus der Zeit der Schreibmaschine und bedeutet <em>linefeed</em>, also zur nächsten Zeile
+wechseln. <strong>\r</strong> ist <em>carriage return</em> und stellt die Schreibposition wieder an den Anfang der Zeile zurück.</p>
+<p>Ein String hat variable Länge und muss demnach ein Ende haben. Dies wird mit 0 bzw mit 0 markiert. Man nennt diese
+<em>zero-terminated</em>. Ansonsten
+würde printf einfach weiter Zeichen ausgeben und (wahrscheinlich) unser Programm zum Abstürzen bringen.</p>
+</section>
+<section id="compilieren-von-hello-world">
+<h2 id="compilieren-von-hello-world">Compilieren von Hello World<a class="headerlink" href="#compilieren-von-hello-world" title="Permalink to this heading">¶</a></h2>
+<p>Das kann man nun auf gefühlt 100 verschiedenen Methoden machen. Je nachdem man welche IDE, Editor und oder
+Betriebssystem verwendet.</p>
+<p>Hier zeige ich es mal wie man es in einem Terminal oder Eingabe Aufforderung machen kann.
+„-Wall“ ist übrigens eine Option mit der man dem Compiler sagen kann, das er warnen soll wenn ihm irgendetwas
+seltsam am Source Code auffällt. Inzwischen sind die Warnung oft schon gut verständlich und moderne Compiler
+machen dann auch Verbesserungsvorschläge.</p>
+<div class="literal-block-wrapper docutils container" id="id3">
+<div class="code-block-caption"><span class="caption-number">Quellcode 2 </span><span class="caption-text">hello_world.c compilieren und ausführen</span><a class="headerlink" href="#id3" title="Link zu diesem Quellcode">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gcc -Wall hello_world.c -o hello_world.exe</span>
+<span class="go">./hello_world</span>
+<span class="go">Hello World</span>
+</pre></div>
+</div>
+</div>
+</section>
+<section id="string-formattierung-und-ausgabe">
+<h2 id="string-formattierung-und-ausgabe">String Formattierung und Ausgabe<a class="headerlink" href="#string-formattierung-und-ausgabe" title="Permalink to this heading">¶</a></h2>
+<p>Aufbauend auf dem <em>Hello World</em> Beispiel möchte ich im nächsten ein wenig auf die Text Ausgabe und
+String Formattierung eingehen. Im Prinzip möchte ich die Tabelle „Hello World im Speicher“ automatisch
+generieren lassen.</p>
+<p>Dazu werden wir neue Sprachfeatures kennen lernen:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>char array als Datentyp</p></li>
+<li><p>sizeof Operator</p></li>
+<li><p><strong>for</strong> Schleife</p></li>
+<li><p>printf Formatstrings</p></li>
+<li><p>hexadecimale Zahlendarstellung</p></li>
+</ul>
+</div></blockquote>
+<div class="literal-block-wrapper docutils container" id="id4">
+<div class="code-block-caption"><span class="caption-number">Quellcode 3 </span><span class="caption-text">hello_world.c</span><a class="headerlink" href="#id4" title="Link zu diesem Quellcode">¶</a></div>
+<div class="highlight-C notranslate"><div class="highlight"><pre><span></span><span class="c1">// Zweite Übung "Hello World Zeichentabelle"</span>
+
+<span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+
+<span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">()</span>
+<span class="p">{</span>
+<span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="p">;</span>
+<span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">hw_text</span><span class="p">[]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">"Hello World</span><span class="se">\n</span><span class="s">"</span><span class="p">;</span>
+
+<span class="w">    </span><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="n">i</span><span class="o">=</span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">&lt;</span><span class="k">sizeof</span><span class="p">(</span><span class="n">hw_text</span><span class="p">);</span><span class="w"> </span><span class="o">++</span><span class="n">i</span><span class="p">)</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">"%2d  %c  %3d  %02x</span><span class="se">\n</span><span class="s">"</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">,</span><span class="w"> </span><span class="n">hw_text</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">hw_text</span><span class="p">[</span><span class="n">i</span><span class="p">],</span><span class="w"> </span><span class="n">hw_text</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+<span class="w">    </span><span class="p">}</span>
+
+<span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+</div>
+<p>Schauen wir uns das zweite Programm etwas genauer an. Als erstes defineren wir eine int Variable i.
+Diese brauchen wir als Laufvariable in der weiter unten genutzten for-Schleife.</p>
+<p>Nebeninfo: In C müssen Variablen immer am Anfang eines Scopes definiert sein. Das bedeutet zB am
+Anfang einer Funktion.</p>
+<p>Dannach definieren wir Platz für unseren Textes mit Hilfe eines <em>char arrays</em>. Ohne Angabe eine
+Größe innerhalb der eckigen Klammern [], passt sich das Array automatisch dem Text der Zuweisung
+an. Inklusive des abschließenden 0, das mann so leider nicht sieht (implizit).</p>
+<p>Nun kommt unsere erste <em>for</em> Schleife. Eine <em>for</em> Schleife hat 3 Argumente:</p>
+<ol class="arabic simple">
+<li><p>Initialer Wert:  i=0;  i started mit dem Wert 0</p></li>
+<li><p>Abbruch oder End Bedingung: Wiederhole solange i kleiner dem angegeben Wert ist</p></li>
+<li><p>Inkrement: ++i ist eine Kurzform der Berechnung i=i+1.</p></li>
+</ol>
+<p>Lustig: ++i und i++ machen in diesem Fall das Gleiche haben aber einen subtilen Unterschied:
+Preinkrement vs Postinkrement. Dazu aber später mehr.</p>
+<p>Mit <em>sizeof</em> lernen wir einen sogenannten Operator kennen. Eine in die Sprache C eingebaute, frei
+verwendbare Funktion. <em>sizeof</em> ermittelt uns den Platzbedarf einer Variable in Bytes. Für unser array
+meldet es 13 Bytes.</p>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Frage: Welchen Wert würde uns sizeof(i) ausgeben?</p>
+</div>
+<p>Unsere Schleife wird nun 13 Mal durchgeführt. Mit i können wir die einzelnen Einträge des arrays
+direkt ansprechen und ausgeben lassen.</p>
+<p>Der Aufruf von printf sieht bei diesem Beispiel schon deutlich komplizierter aus. Das erste Argument
+ist der sogenannte „Formatstring“.</p>
+<p>Im Detail sagt der Formatstring „%2d  %c  %3d  %02xn“ wie in unserem Programm die Textausgabe aussehen soll:</p>
+<ul class="simple">
+<li><dl class="simple">
+<dt>„%2d“</dt><dd><ul>
+<li><p>Ausgabe eines <em>int</em> in Dezimalformat mit mindestens zwei Stellen. „%d“ wäre die einfache Ausgabe eines int.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>„%c“</dt><dd><ul>
+<li><p>Ausgabe eines <em>char</em> also einem einzelnen Zeichen.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>„%3d“</dt><dd><ul>
+<li><p>Ausgabe eines <em>int</em> in Dezimalformat mit mindestens drei Stellen.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>„%02x“</dt><dd><ul>
+<li><p>Ausgabe eines <em>int</em> in Hexdezimalformat mit mindestens 2 Stellen. 02 füllt leere Stellen links mit Nullen auf: zB statt ‚a‘ wird ‚0a‘ ausgegeben.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p>Das war nur ein kleiner Ausflug in die printf Formatoptionen. Was es sonst noch gibt kann man hier <a class="reference external" href="https://cplusplus.com/reference/cstdio/printf/">https://cplusplus.com/reference/cstdio/printf/</a>
+nachschlagen.</p>
+<section id="hexadezimalformat">
+<h3 id="hexadezimalformat">Hexadezimalformat?<a class="headerlink" href="#hexadezimalformat" title="Permalink to this heading">¶</a></h3>
+<p>Ganz kurz möchte ich Hexadezimalformat erklären, zumindest für jene die diesen Begriff noch nie gehört haben.
+Die Hexadezimal Darstellung verwendet für eine Zahl nicht nur die Zeichen 0 bis 9 sondern zusätzlich auch
+noch A,B,C,D,E,F. Diese entsprechen den Zahlenwerten 10,11,12,13,14,15.</p>
+<p>Wir machen das nicht für mehr Verwirrung und Jobsicherheit, sondern weil sich hexadezimale Werte sich sehr leicht auf
+binäre Werte umrechnen lassen. Eine hexadezimale Ziffer besteht immer genau aus 4 binären Ziffern:</p>
+<table id="id5">
+<caption><span class="caption-number">Tab. 2 </span><span class="caption-text">Dezimal, Hexadezimal, Binär</span><a class="headerlink" href="#id5" title="Link zu dieser Tabelle">¶</a></caption>
+<colgroup>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+<col style="width: 33%"/>
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p><strong>Dezimal</strong></p></th>
+<th class="head"><p><strong>Hexadezimal</strong></p></th>
+<th class="head"><p><strong>Binär</strong></p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>0</p></td>
+<td><p>0</p></td>
+<td><p>0000</p></td>
+</tr>
+<tr class="row-odd"><td><p>1</p></td>
+<td><p>1</p></td>
+<td><p>0001</p></td>
+</tr>
+<tr class="row-even"><td><p>2</p></td>
+<td><p>2</p></td>
+<td><p>0010</p></td>
+</tr>
+<tr class="row-odd"><td><p>3</p></td>
+<td><p>3</p></td>
+<td><p>0011</p></td>
+</tr>
+<tr class="row-even"><td><p>4</p></td>
+<td><p>4</p></td>
+<td><p>0100</p></td>
+</tr>
+<tr class="row-odd"><td><p>5</p></td>
+<td><p>5</p></td>
+<td><p>0101</p></td>
+</tr>
+<tr class="row-even"><td><p>6</p></td>
+<td><p>6</p></td>
+<td><p>0110</p></td>
+</tr>
+<tr class="row-odd"><td><p>7</p></td>
+<td><p>7</p></td>
+<td><p>0111</p></td>
+</tr>
+<tr class="row-even"><td><p>8</p></td>
+<td><p>8</p></td>
+<td><p>1000</p></td>
+</tr>
+<tr class="row-odd"><td><p>9</p></td>
+<td><p>9</p></td>
+<td><p>1001</p></td>
+</tr>
+<tr class="row-even"><td><p>10</p></td>
+<td><p>A</p></td>
+<td><p>1010</p></td>
+</tr>
+<tr class="row-odd"><td><p>11</p></td>
+<td><p>B</p></td>
+<td><p>1011</p></td>
+</tr>
+<tr class="row-even"><td><p>12</p></td>
+<td><p>C</p></td>
+<td><p>1100</p></td>
+</tr>
+<tr class="row-odd"><td><p>13</p></td>
+<td><p>D</p></td>
+<td><p>1101</p></td>
+</tr>
+<tr class="row-even"><td><p>14</p></td>
+<td><p>E</p></td>
+<td><p>1110</p></td>
+</tr>
+<tr class="row-odd"><td><p>15</p></td>
+<td><p>F</p></td>
+<td><p>1111</p></td>
+</tr>
+<tr class="row-even"><td><p>16</p></td>
+<td><p>10</p></td>
+<td><p>10000</p></td>
+</tr>
+</tbody>
+</table>
+<div class="admonition note">
+<p class="admonition-title">Bemerkung</p>
+<p>Und jetzt verstehen wir hoffentlich den alten Programmierer Witz:</p>
+<p>There are 10 types of people in this world, those who understand binary and those who dont.</p>
+</div>
+</section>
+</section>
+<section id="compilieren-von-hello-world-table">
+<h2 id="compilieren-von-hello-world-table">Compilieren von Hello World Table<a class="headerlink" href="#compilieren-von-hello-world-table" title="Permalink to this heading">¶</a></h2>
+<div class="literal-block-wrapper docutils container" id="id6">
+<div class="code-block-caption"><span class="caption-number">Quellcode 4 </span><span class="caption-text">hello_world_table.c compilieren und ausführen</span><a class="headerlink" href="#id6" title="Link zu diesem Quellcode">¶</a></div>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">gcc -Wall hello_world_table.c -o hello_world_table.exe</span>
+<span class="go">./hello_world_table</span>
+<span class="go"> 0  H   72  48</span>
+<span class="go"> 1  e  101  65</span>
+<span class="go"> 2  l  108  6c</span>
+<span class="go"> 3  l  108  6c</span>
+<span class="go"> 4  o  111  6f</span>
+<span class="go"> 5      32  20</span>
+<span class="go"> 6  W   87  57</span>
+<span class="go"> 7  o  111  6f</span>
+<span class="go"> 8  r  114  72</span>
+<span class="go"> 9  l  108  6c</span>
+<span class="go">10  d  100  64</span>
+<span class="go">11</span>
+<span class="go">    10  0a</span>
+<span class="go">12      0  00</span>
+</pre></div>
+</div>
+</div>
+<p>Hat wer eine Idee was bei Index 11 in der Ausgabe passiert?</p>
+</section>
+</section>
+
+
+          </article>
+        </div>
+      </div>
+    </main>
+  </div>
+  <footer class="md-footer">
+    <div class="md-footer-nav">
+      <nav class="md-footer-nav__inner md-grid">
+          
+            <a href="../01_Einfuehrung/Einfuehrung.html" title="Einführung"
+               class="md-flex md-footer-nav__link md-footer-nav__link--prev"
+               rel="prev">
+              <div class="md-flex__cell md-flex__cell--shrink">
+                <i class="md-icon md-icon--arrow-back md-footer-nav__button"></i>
+              </div>
+              <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title">
+                <span class="md-flex__ellipsis">
+                  <span
+                      class="md-footer-nav__direction"> Previous </span> Einführung </span>
+              </div>
+            </a>
+          
+          
+        </a>
+        
+      </nav>
+    </div>
+    <div class="md-footer-meta md-typeset">
+      <div class="md-footer-meta__inner md-grid">
+        <div class="md-footer-copyright">
+          <div class="md-footer-copyright__highlight">
+              &#169; Copyright 2023, Gunther Laure.
+              
+          </div>
+            Created using
+            <a href="http://www.sphinx-doc.org/">Sphinx</a> 6.1.3.
+             and
+            <a href="https://github.com/bashtage/sphinx-material/">Material for
+              Sphinx</a>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="../_static/javascripts/application.js"></script>
+  <script>app.initialize({version: "1.0.4", url: {base: ".."}})</script>
+  </body>
+</html>

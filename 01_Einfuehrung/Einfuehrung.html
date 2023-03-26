@@ -1,7 +1,7 @@
 
 <!DOCTYPE html>
 
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
@@ -47,16 +47,17 @@
   
   
   
-    <title>Einführung &#8212; Eintwicklung in C  documentation</title>
+    <title>Einführung &#8212; Entwicklung in C (0.1) Dokumentation</title>
     <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
     <link rel="stylesheet" type="text/css" href="../_static/material.css" />
     <link rel="stylesheet" type="text/css" href="../_static/stylesheets/oxygen_material.css" />
     <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
     <script src="../_static/doctools.js"></script>
     <script src="../_static/sphinx_highlight.js"></script>
-    <link rel="index" title="Index" href="../genindex.html" />
-    <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Werkzeuge" href="../02_Werkzeuge/Werkzeuge.html" />
+    <script src="../_static/translations.js"></script>
+    <link rel="index" title="Stichwortverzeichnis" href="../genindex.html" />
+    <link rel="search" title="Suche" href="../search.html" />
+    <link rel="next" title="Das erste Programm" href="../02_DasErsteProgramm/DasErsteProgramm.html" />
     <link rel="prev" title="Entwicklung in C für Anfänger" href="../index.html" />
   
    
@@ -81,7 +82,7 @@
   <nav class="md-header-nav md-grid">
     <div class="md-flex navheader">
       <div class="md-flex__cell md-flex__cell--shrink">
-        <a href="../index.html" title="Eintwicklung in C  documentation"
+        <a href="../index.html" title="Entwicklung in C (0.1) Dokumentation"
            class="md-header-nav__button md-logo">
           
             &nbsp;
@@ -150,7 +151,7 @@
   <nav class="md-tabs" data-md-component="tabs">
     <div class="md-tabs__inner md-grid">
       <ul class="md-tabs__list">
-          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Eintwicklung in C  documentation</a></li>
+          <li class="md-tabs__item"><a href="../index.html" class="md-tabs__link">Entwicklung in C (0.1) Dokumentation</a></li>
       </ul>
     </div>
   </nav>
@@ -162,14 +163,90 @@
               <div class="md-sidebar__inner">
                 <nav class="md-nav md-nav--primary" data-md-level="0">
   <label class="md-nav__title md-nav__title--site" for="__drawer">
-    <a href="../index.html" title="Eintwicklung in C documentation" class="md-nav__button md-logo">
+    <a href="../index.html" title="Entwicklung in C (0.1) Dokumentation" class="md-nav__button md-logo">
       
         <img src="../_static/" alt=" logo" width="48" height="48">
       
     </a>
     <a href="../index.html"
-       title="Eintwicklung in C documentation">Entwicklung in C</a>
+       title="Entwicklung in C (0.1) Dokumentation">Entwicklung in C</a>
   </label>
+  
+
+  
+  <ul class="md-nav__list">
+    <li class="md-nav__item">
+    
+      <span class="md-nav__link caption"><span class="caption-text">Contents</span></span>
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+    <input class="md-toggle md-nav__toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+    <label class="md-nav__link md-nav__link--active" for="__toc"> Einführung </label>
+    
+      <a href="#" class="md-nav__link md-nav__link--active">Einführung</a>
+      
+        
+<nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
+  <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#01-einfuehrung-einfuehrung--page-root" class="md-nav__link">Einführung</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#die-programmiersprache-c" class="md-nav__link">Die Programmiersprache C</a>
+        </li>
+        <li class="md-nav__item"><a href="#begriffe-und-werkzeuge" class="md-nav__link">Begriffe und Werkzeuge</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#source-code" class="md-nav__link">Source Code</a>
+        </li>
+        <li class="md-nav__item"><a href="#compiler" class="md-nav__link">Compiler</a>
+        </li>
+        <li class="md-nav__item"><a href="#preprozessor" class="md-nav__link">Preprozessor</a>
+        </li>
+        <li class="md-nav__item"><a href="#integrated-development-environment-ide" class="md-nav__link">Integrated Development Environment (IDE)</a>
+        </li>
+        <li class="md-nav__item"><a href="#makefile" class="md-nav__link">Makefile</a>
+        </li>
+        <li class="md-nav__item"><a href="#debugger" class="md-nav__link">Debugger</a>
+        </li>
+        <li class="md-nav__item"><a href="#profiler" class="md-nav__link">Profiler</a>
+        </li>
+        <li class="md-nav__item"><a href="#linker" class="md-nav__link">Linker</a>
+        </li>
+        <li class="md-nav__item"><a href="#h-file-header" class="md-nav__link">h File (Header)</a>
+        </li>
+        <li class="md-nav__item"><a href="#c-file-source" class="md-nav__link">c File (Source)</a>
+        </li>
+        <li class="md-nav__item"><a href="#executeable" class="md-nav__link">Executeable</a>
+        </li>
+        <li class="md-nav__item"><a href="#library" class="md-nav__link">Library</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#andere-begriffe" class="md-nav__link">Andere Begriffe</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#spaghetticode" class="md-nav__link">Spaghetticode</a>
+        </li>
+        <li class="md-nav__item"><a href="#coding-standard" class="md-nav__link">Coding Standard</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
+  </ul>
+</nav>
+      
+    
+    </li>
+    <li class="md-nav__item">
+    
+    
+      <a href="../02_DasErsteProgramm/DasErsteProgramm.html" class="md-nav__link">Das erste Programm</a>
+      
+    
+    </li>
+  </ul>
   
 
 </nav>
@@ -181,7 +258,50 @@
               <div class="md-sidebar__inner">
                 
 <nav class="md-nav md-nav--secondary">
+    <label class="md-nav__title" for="__toc">Contents</label>
   <ul class="md-nav__list" data-md-scrollfix="">
+        <li class="md-nav__item"><a href="#01-einfuehrung-einfuehrung--page-root" class="md-nav__link">Einführung</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#die-programmiersprache-c" class="md-nav__link">Die Programmiersprache C</a>
+        </li>
+        <li class="md-nav__item"><a href="#begriffe-und-werkzeuge" class="md-nav__link">Begriffe und Werkzeuge</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#source-code" class="md-nav__link">Source Code</a>
+        </li>
+        <li class="md-nav__item"><a href="#compiler" class="md-nav__link">Compiler</a>
+        </li>
+        <li class="md-nav__item"><a href="#preprozessor" class="md-nav__link">Preprozessor</a>
+        </li>
+        <li class="md-nav__item"><a href="#integrated-development-environment-ide" class="md-nav__link">Integrated Development Environment (IDE)</a>
+        </li>
+        <li class="md-nav__item"><a href="#makefile" class="md-nav__link">Makefile</a>
+        </li>
+        <li class="md-nav__item"><a href="#debugger" class="md-nav__link">Debugger</a>
+        </li>
+        <li class="md-nav__item"><a href="#profiler" class="md-nav__link">Profiler</a>
+        </li>
+        <li class="md-nav__item"><a href="#linker" class="md-nav__link">Linker</a>
+        </li>
+        <li class="md-nav__item"><a href="#h-file-header" class="md-nav__link">h File (Header)</a>
+        </li>
+        <li class="md-nav__item"><a href="#c-file-source" class="md-nav__link">c File (Source)</a>
+        </li>
+        <li class="md-nav__item"><a href="#executeable" class="md-nav__link">Executeable</a>
+        </li>
+        <li class="md-nav__item"><a href="#library" class="md-nav__link">Library</a>
+        </li></ul>
+            </nav>
+        </li>
+        <li class="md-nav__item"><a href="#andere-begriffe" class="md-nav__link">Andere Begriffe</a><nav class="md-nav">
+              <ul class="md-nav__list">
+        <li class="md-nav__item"><a href="#spaghetticode" class="md-nav__link">Spaghetticode</a>
+        </li>
+        <li class="md-nav__item"><a href="#coding-standard" class="md-nav__link">Coding Standard</a>
+        </li></ul>
+            </nav>
+        </li></ul>
+            </nav>
+        </li>
   </ul>
 </nav>
               </div>
@@ -193,7 +313,104 @@
             
   <section id="einfuhrung">
 <h1 id="01-einfuehrung-einfuehrung--page-root">Einführung<a class="headerlink" href="#01-einfuehrung-einfuehrung--page-root" title="Permalink to this heading">¶</a></h1>
-<p>TODO</p>
+<section id="die-programmiersprache-c">
+<h2 id="die-programmiersprache-c">Die Programmiersprache C<a class="headerlink" href="#die-programmiersprache-c" title="Permalink to this heading">¶</a></h2>
+<p>C ist eine recht kleine Programmiersprache. Das macht sie anpassbar und
+sehr gut auf großen wie auch kleinen (embedded) Systemen verwendbar.</p>
+<p>Erfunden wurde sie im Jahr 1972 von Dennis Ritchie. Sie ist sehr Nahe an der Art
+wie ein Prozessor wirklich funktioniert.</p>
+<p>Fast alle Betriebssysteme bzw ihr Kern sind in C programmiert. Man kennt vielleicht
+Microsoft Windows oder Linux :-).</p>
+</section>
+<section id="begriffe-und-werkzeuge">
+<h2 id="begriffe-und-werkzeuge">Begriffe und Werkzeuge<a class="headerlink" href="#begriffe-und-werkzeuge" title="Permalink to this heading">¶</a></h2>
+<p>Ich sage es kurz: Es gibt deutsche Begriffe für die meisten Werkzeuge. Aber die verwendet keiner.
+Software Entwicklung ist eine der Beschäftigungen die nebenbei einen sehr soliden technischen
+Wortschatz aufbauen.</p>
+<section id="source-code">
+<h3 id="source-code">Source Code<a class="headerlink" href="#source-code" title="Permalink to this heading">¶</a></h3>
+<p>Der Text der die Grundlage eines Programmes ist. Source Code ist in einer Programmiersprache geschrieben.
+Im Rahmen dieses Kurses in C.</p>
+</section>
+<section id="compiler">
+<h3 id="compiler">Compiler<a class="headerlink" href="#compiler" title="Permalink to this heading">¶</a></h3>
+<p>Ein Compiler hat die Aufgabe den Source Code eines Programmes für einen Computer zu übersetzen.
+Er wird aus unseren Beispielen eine ausführbare Datei generieren. Entweder ein sogenanntes „Executeable“,
+oder ein „Object“ File.</p>
+<p>Beispiel: gcc, clang</p>
+</section>
+<section id="preprozessor">
+<h3 id="preprozessor">Preprozessor<a class="headerlink" href="#preprozessor" title="Permalink to this heading">¶</a></h3>
+<p>Ein Preprozessor sitzt zwischen dem Source Code und dem Compiler. Der filtert im Source Code diverse
+Begriffe („#include“) und ersetzt sie. Bei #include mit dem Inhalt der Datei. Typischerweise eine Header
+Datei.</p>
+<p>Preprozessor Statements beginnen immer mit einer Raute.</p>
+<p>Beispiel: cpp</p>
+</section>
+<section id="integrated-development-environment-ide">
+<h3 id="integrated-development-environment-ide">Integrated Development Environment (IDE)<a class="headerlink" href="#integrated-development-environment-ide" title="Permalink to this heading">¶</a></h3>
+<p>Wäre zum Beispiel Visual Studio 2022 oder auch Visual Studio Code. Eine IDE kombiniert
+Editor, Compiler, Linker, Debugger und alles was man noch so brauchen könnte. Der
+Editor unterstützt typischerweise Syntax Highlighting. Das macht Source Code leichter
+bearbeit- und lesbar.</p>
+</section>
+<section id="makefile">
+<h3 id="makefile">Makefile<a class="headerlink" href="#makefile" title="Permalink to this heading">¶</a></h3>
+<p>Ein „Rezept“ das steuert wie ein Programm übersetzt werden muss.</p>
+<p>Beispiel: make</p>
+</section>
+<section id="debugger">
+<h3 id="debugger">Debugger<a class="headerlink" href="#debugger" title="Permalink to this heading">¶</a></h3>
+<p>Ein Debugger erlaubt es Fehler in einem Programm zu finden. Man kann die Asuführung beobachten, den
+Inhalt von Variablen betrachten und Breakpoints setzen.</p>
+<p>Beispiel: gdb, lldb</p>
+</section>
+<section id="profiler">
+<h3 id="profiler">Profiler<a class="headerlink" href="#profiler" title="Permalink to this heading">¶</a></h3>
+<p>Ein wichtiges Optimierungstool das zeig wo viel Zeit in einem Programm verbraucht wird. An dieses
+Stellen kann man dann Änderungen durchführen um hoffentlich eine schnelleres Executeable zu erhalten.</p>
+</section>
+<section id="linker">
+<h3 id="linker">Linker<a class="headerlink" href="#linker" title="Permalink to this heading">¶</a></h3>
+<p>Notwendiges Tool um aus mehreren Object Files ein Programm zu erhalten. Nötig da größere Programme
+üblicherweise aus mehreren Dateien bestehen.</p>
+<p>Beispiel: ld</p>
+</section>
+<section id="h-file-header">
+<h3 id="h-file-header">h File (Header)<a class="headerlink" href="#h-file-header" title="Permalink to this heading">¶</a></h3>
+<p>Header files beeinhalten deklarieren Datentypen und Funktionen.</p>
+</section>
+<section id="c-file-source">
+<h3 id="c-file-source">c File (Source)<a class="headerlink" href="#c-file-source" title="Permalink to this heading">¶</a></h3>
+<p>Source files fügen definieren die in Header Files erwähnten Funktionen.</p>
+</section>
+<section id="executeable">
+<h3 id="executeable">Executeable<a class="headerlink" href="#executeable" title="Permalink to this heading">¶</a></h3>
+<p>Eine ausführbare Datei.</p>
+</section>
+<section id="library">
+<h3 id="library">Library<a class="headerlink" href="#library" title="Permalink to this heading">¶</a></h3>
+<p>Ein binary das nicht ausführbar ist, aber von anderen Executables verwendet werden kann.</p>
+</section>
+</section>
+<section id="andere-begriffe">
+<h2 id="andere-begriffe">Andere Begriffe<a class="headerlink" href="#andere-begriffe" title="Permalink to this heading">¶</a></h2>
+<section id="spaghetticode">
+<h3 id="spaghetticode">Spaghetticode<a class="headerlink" href="#spaghetticode" title="Permalink to this heading">¶</a></h3>
+<p>Typischer Stil der am Anfang einer Programmierkarriere häufig genutzt wird.
+Da man das Gefühl für die Größe von Funktionen noch nicht entwickelt hat, entstehen
+lange wenig zusammenhängende Funktionen die schwer verständlich und wartbar sind.
+Diese Phase geht mit Erfahrung vorbei.</p>
+</section>
+<section id="coding-standard">
+<h3 id="coding-standard">Coding Standard<a class="headerlink" href="#coding-standard" title="Permalink to this heading">¶</a></h3>
+<p>Methode erfahrener Programmierer um Junior und Anfänger zu nerven. Nicht nur das man
+eine neue Programmiersprache und Beispiele meistern soll, verlangen diese auch noch
+einen gewissen Stil, einen Coding Standard, einzuhalten: Funkionen so, Variable auf
+diese Art, usw… Sprache für Kommentare auf Englisch…</p>
+<p>Trotzdem wichtig weil der Source Code auf Dauer für alle besser les- und wartbar ist.</p>
+</section>
+</section>
 </section>
 
 
@@ -220,12 +437,12 @@
             </a>
           
           
-            <a href="../02_Werkzeuge/Werkzeuge.html" title="Werkzeuge"
+            <a href="../02_DasErsteProgramm/DasErsteProgramm.html" title="Das erste Programm"
                class="md-flex md-footer-nav__link md-footer-nav__link--next"
                rel="next">
             <div class="md-flex__cell md-flex__cell--stretch md-footer-nav__title"><span
                 class="md-flex__ellipsis"> <span
-                class="md-footer-nav__direction"> Next </span> Werkzeuge </span>
+                class="md-footer-nav__direction"> Next </span> Das erste Programm </span>
             </div>
             <div class="md-flex__cell md-flex__cell--shrink"><i
                 class="md-icon md-icon--arrow-forward md-footer-nav__button"></i>
