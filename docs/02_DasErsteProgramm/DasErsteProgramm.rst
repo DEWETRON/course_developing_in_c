@@ -351,5 +351,5 @@ Diese beginnen mit //. Alles hinter // wird vom Compiler ignoriert.
 
 .. note:: 
     Kommentare werden genutzt um Source Code lesbarer zu machen. Man kann sie aber auch 
-    ausnutzen im Teile "auszukommentieren" also vom Compiler zu verstecken. zB bei der
+    ausnutzen im Teile "auszukommentieren" also vor dem Compiler zu verstecken, zB bei der
     Fehlersuche.
