@@ -1,4 +1,0 @@
-Datentypen
-==========
-
-TODO

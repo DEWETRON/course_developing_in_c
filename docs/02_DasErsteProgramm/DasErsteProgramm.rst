@@ -292,3 +292,64 @@ Compilieren von Hello World Table
 
 Hat wer eine Idee was bei Index 11 in der Ausgabe passiert?
 
+
+Kommentare in C
+---------------
+
+Multiline Kommentare
+~~~~~~~~~~~~~~~~~~~~
+
+Kommentarblöcke beginnen in C mit /\* und enden mit \*/. Sie können über mehrere
+Zeilen gehen. Der Inhalt dieser Blöcke wird vom Compiler ignoriert. 
+
+
+.. code-block:: C
+    :caption: hello_world.c auskommentiert
+
+    #include <stdio.h>
+
+    int main()
+    {
+        /*
+        int i;
+        char hw_text[] = "Hello World\n";
+
+        for (i=0; i<sizeof(hw_text); ++i)
+        {
+            printf("%2d  %c  %3d  %02x\n", i, hw_text[i], hw_text[i], hw_text[i]);
+        }
+        */
+        
+        return 0;
+    }
+
+Singleline Kommentare
+~~~~~~~~~~~~~~~~~~~~~
+
+Diese beginnen mit //. Alles hinter // wird vom Compiler ignoriert.
+
+.. code-block:: C
+    :caption: hello_world.c auskommentiert
+
+    #include <stdio.h>
+
+    // main function
+    int main()
+    {
+        int i;
+        char hw_text[] = "Hello World\n";
+
+        // loop over every character of the text
+        for (i=0; i<sizeof(hw_text); ++i)
+        {
+            printf("%2d  %c  %3d  %02x\n", i, hw_text[i], hw_text[i], hw_text[i]);
+        }
+        
+        // end of program
+        return 0;
+    }
+
+.. note:: 
+    Kommentare werden genutzt um Source Code lesbarer zu machen. Man kann sie aber auch 
+    ausnutzen im Teile "auszukommentieren" also vom Compiler zu verstecken. zB bei der
+    Fehlersuche.

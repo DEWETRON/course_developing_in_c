@@ -15,4 +15,5 @@ Entwicklung in C für Anfänger
 
    01_Einfuehrung/Einfuehrung.rst
    02_DasErsteProgramm/DasErsteProgramm.rst
+   03_Datentypen/Datentypen.rst
 
