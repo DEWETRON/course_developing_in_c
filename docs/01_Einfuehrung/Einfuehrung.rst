@@ -29,7 +29,7 @@ Wortschatz aufbauen.
 Source Code
 ~~~~~~~~~~~
 Der Text der die Grundlage eines Programmes ist. Source Code ist in einer Programmiersprache geschrieben.
-Hier im algemeinen in C.
+Im Rahmen dieses Kurses in C.
 
 
 Compiler

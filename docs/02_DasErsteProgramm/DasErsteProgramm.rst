@@ -1,4 +1,4 @@
-Das Erste Programm
+Das erste Programm
 ==================
 
 Beim Erlernen einer ersten oder neuen Programmiersprache gibt es seit jeher eine kleine Tradition:
@@ -167,7 +167,7 @@ Dannach definieren wir Platz für unseren Textes mit Hilfe eines *char arrays*. 
 Größe innerhalb der eckigen Klammern [], passt sich das Array automatisch dem Text der Zuweisung
 an. Inklusive des abschließenden \0, das mann so leider nicht sieht (implizit).
 
-Nun kommt unsere erste for Schleife. Eine for Schleife hat 3 Argumente:
+Nun kommt unsere erste *for* Schleife. Eine *for* Schleife hat 3 Argumente:
 
 1. Initialer Wert:  i=0;  i started mit dem Wert 0
 2. Abbruch oder End Bedingung: Wiederhole solange i kleiner dem angegeben Wert ist
@@ -181,7 +181,8 @@ Mit *sizeof* lernen wir einen sogenannten Operator kennen. Eine in die Sprache C
 verwendbare Funktion. *sizeof* ermittelt uns den Platzbedarf einer Variable in Bytes. Für unser array
 meldet es 13 Bytes.
 
-Frage: Welchen Wert würde uns sizeof(i) ausgeben?
+.. note::
+    Frage: Welchen Wert würde uns sizeof(i) ausgeben?
 
 Unsere Schleife wird nun 13 Mal durchgeführt. Mit i können wir die einzelnen Einträge des arrays 
 direkt ansprechen und ausgeben lassen.
@@ -190,6 +191,79 @@ direkt ansprechen und ausgeben lassen.
 Der Aufruf von printf sieht bei diesem Beispiel schon deutlich komplizierter aus. Das erste Argument
 ist der sogenannte "Formatstring".
 
+
+Im Detail sagt der Formatstring "%2d  %c  %3d  %02x\n" wie in unserem Programm die Textausgabe aussehen soll:
+
+* "%2d"
+    * Ausgabe eines *int* in Dezimalformat mit mindestens zwei Stellen. "%d" wäre die einfache Ausgabe eines int.
+* "%c"
+    * Ausgabe eines *char* also einem einzelnen Zeichen.
+* "%3d"
+    * Ausgabe eines *int* in Dezimalformat mit mindestens drei Stellen.
+* "%02x"
+    * Ausgabe eines *int* in Hexdezimalformat mit mindestens 2 Stellen. 02 füllt leere Stellen links mit Nullen auf: zB statt 'a' wird '0a' ausgegeben.
+
+Das war nur ein kleiner Ausflug in die printf Formatoptionen. Was es sonst noch gibt kann man hier https://cplusplus.com/reference/cstdio/printf/ 
+nachschlagen.
+
+
+Hexadezimalformat?
+~~~~~~~~~~~~~~~~~~
+Ganz kurz möchte ich Hexadezimalformat erklären, zumindest für jene die diesen Begriff noch nie gehört haben.
+Die Hexadezimal Darstellung verwendet für eine Zahl nicht nur die Zeichen 0 bis 9 sondern zusätzlich auch
+noch A,B,C,D,E,F. Diese entsprechen den Zahlenwerten 10,11,12,13,14,15.
+
+Wir machen das nicht für mehr Verwirrung und Jobsicherheit, sondern weil sich hexadezimale Werte sich sehr leicht auf
+binäre Werte umrechnen lassen. Eine hexadezimale Ziffer besteht immer genau aus 4 binären Ziffern:
+
+.. tabularcolumns:: |p{2.5cm}|p{2.5cm}|p{2.5cm}|
+
+.. table:: Dezimal, Hexadezimal, Binär
+   :widths: 20 20 20
+
+   +---------------+--------------------------+------------------------------------------------------+
+   | **Dezimal**   | **Hexadezimal**          | **Binär**                                            |
+   +===============+==========================+======================================================+
+   | 0             | 0                        | 0000                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 1             | 1                        | 0001                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 2             | 2                        | 0010                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 3             | 3                        | 0011                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 4             | 4                        | 0100                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 5             | 5                        | 0101                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 6             | 6                        | 0110                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 7             | 7                        | 0111                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 8             | 8                        | 1000                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 9             | 9                        | 1001                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 10            | A                        | 1010                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 11            | B                        | 1011                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 12            | C                        | 1100                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 13            | D                        | 1101                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 14            | E                        | 1110                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 15            | F                        | 1111                                                 |
+   +---------------+--------------------------+------------------------------------------------------+
+   | 16            | 10                       | 10000                                                |
+   +---------------+--------------------------+------------------------------------------------------+
+ 
+
+.. note::
+    Und jetzt verstehen wir hoffentlich den alten Programmierer Witz:
+
+    There are 10 types of people in this world, those who understand binary and those who dont.
 
 
 Compilieren von Hello World Table
@@ -214,3 +288,7 @@ Compilieren von Hello World Table
     11  
         10  0a
     12      0  00
+
+
+Hat wer eine Idee was bei Index 11 in der Ausgabe passiert?
+
