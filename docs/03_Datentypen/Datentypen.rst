@@ -113,6 +113,41 @@ Das ergibt diese Liste gültiger Kombinationen
    +---------------+----------------------------------------------------+----------------------------+
 
 
+Seit C99 gibt es noch spezielle Datentypen für *complexe* Werte. Das sind Gleitkommazahlen
+die einen Real und einen Imaginärteil haben. Wer in eine HTL gegangen ist, dem ist der Nutzen
+bekannt. Die meißten Anderen können das getrost ignorieren.
+
+.. tabularcolumns:: |p{2.5cm}|p{2.5cm}|p{2.5cm}|
+
+.. table:: Komplexe Datentypen
+   :widths: 20 20 20
+
+   +---------------+----------------------------------------------------+----------------------------+
+   | float _Complex| komplexe Zahl mit Nachkommastellen                 | 64                         |
+   |               | Nicht genau definiert.                             |                            |
+   +---------------+----------------------------------------------------+----------------------------+
+   | double        | Komplexe Zahl mit Nachkommastellen                 | 128                        |
+   | _Complex      | Nicht genau definiert.                             |                            |
+   +---------------+----------------------------------------------------+----------------------------+
+   | long double   | Komplexe mit Nachkommastellen                      | 256                        |
+   | _Complex      | Nicht genau definiert.                             |                            |
+   +---------------+----------------------------------------------------+----------------------------+
+
+Außerdem gibt es noch _Bool (seit C99). Dieser kann nur die Werte 0 oder 1 annehmen.
+
+
+Wichtig und am Anfang sicher seltsam: Der Datentype *void*.
+Er wird zum Beispiel dazu benützt um Funktionen zu definieren, die keinen Rückgabewert haben.
+
+.. code-block:: C
+    :caption: void Funktion
+
+    void print_hello()
+    {
+         printf("hello\n");
+    }
+
+
 Strukturierte Datentypen
 ------------------------
 
